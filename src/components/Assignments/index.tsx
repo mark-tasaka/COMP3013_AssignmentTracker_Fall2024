@@ -1,24 +1,30 @@
 import { Assignment } from "../Assignment";
 import styles from "./assignments.module.css";
 
-export function Assignments() {
-  return (
-    <section className={styles.assignments}>
-      <header className={styles.header}>
-        <div>
-          <p>Created Assignments</p>
-          <span>1</span>
-        </div>
-
-        <div>
-          <p className={styles.textPurple}>Completed Assignments</p>
-          <span>1 of 1</span>
-        </div>
-      </header>
-
-      <div className={styles.list}>
-        <Assignment />
-      </div>
-    </section>
-  );
-}
+export function Assignments({assignments, deleteAssignment, hasCompleted}: any) {
+  // hasCompleted(assignments.completed)
+   return (
+     <section className={styles.assignments}>
+       <header className={styles.header}>
+         <div>
+           <p>Created Assignments</p>
+           <span>{assignments.length}</span>
+         </div>
+ 
+         <div>
+           <p className={styles.textPurple}>Completed Assignments</p>
+           <span>{} of {assignments.length}</span>
+         </div>
+       </header>
+ 
+       <div className={styles.list}>
+        {assignments.map((assignment: any) => 
+           <Assignment name={assignment.title} completed={assignment.completed} id={assignment.id}  deleteAssignment={deleteAssignment}  hasCompleted={hasCompleted}  />
+        )}
+       </div>
+     </section>
+   );
+ }
+ 
+ 
+ 

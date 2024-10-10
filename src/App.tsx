@@ -14,8 +14,8 @@ type Assignment = {
 function App() {
   const[assignment, setAssignment] = useState<Assignment[]>([]);
   
-  const addAssignment = (theAssignment: any) => { 
-    setAssignment([...assignment, {id: assignment.length + 1, name: theAssignment, isComplete: false}])
+  const addAssignment = (theAssignment: Assignment[]) => { 
+    setAssignment([...assignment, {id: theAssignment.length + 1, name: "", isComplete: false}])
   }
 
   const hasCompleted = (isComplete: boolean, id:number) =>{
