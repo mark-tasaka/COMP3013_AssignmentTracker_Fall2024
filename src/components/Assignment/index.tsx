@@ -11,8 +11,8 @@ type Props = {name: string, completed: boolean, id: number, deleteAssignment: (i
 
 export function Assignment({name, completed, id, deleteAssignment, hasCompleted}: Props) {
 
-  const [completedCount, setCompletedCount] = useState(0)
-  const [theComplete, setTheComplete] = useState(completed)
+  //const [completedCount, setCompletedCount] = useState(0)
+  //const [theComplete, setTheComplete] = useState(completed)
 
  // alert("theComplete is" + theCompleted)
 

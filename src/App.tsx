@@ -37,10 +37,16 @@ function App() {
 
   return (
     <>
-      <Header addAssignment={addAssignment}/>
-      <Assignments  assignment={assignment} deleteAssignment={deleteAssignment}  hasCompleted={hasCompleted}/>
+    <Header addAssignment={addAssignment}/>
+    <Assignments  assignment={assignment} deleteAssignment={deleteAssignment}  hasCompleted={hasCompleted}/>
     </>
   );
 }
 
 export default App;
+
+/*
+
+      <Header addAssignment={addAssignment}/>
+      <Assignments  assignment={assignment} deleteAssignment={deleteAssignment}  hasCompleted={hasCompleted}/>
+*/
