@@ -1,6 +1,13 @@
 import { Assignment } from "../Assignment";
 import styles from "./assignments.module.css";
 
+/*
+type TAssignment = {
+  id: number;
+  name: string;
+  hasComplete: boolean;
+}*/
+
 export function Assignments({assignments, deleteAssignment, hasCompleted}: any) {
   // hasCompleted(assignments.completed)
    return (

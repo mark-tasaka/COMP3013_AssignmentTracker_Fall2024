@@ -1,20 +1,22 @@
 import { Header } from "./components/Header";
 import { Assignments } from "./components/Assignments";
 import { useState } from "react";
+import { TAssignment } from "./type/type";
 
 //Mark Tasaka
 //Lab 3
 
+/*
 type Assignment = {
   id: number;
   name: string;
   isComplete: boolean;
-}
+}*/
 
 function App() {
-  const[assignment, setAssignment] = useState<Assignment[]>([]);
+  const[assignment, setAssignment] = useState<TAssignment[]>([]);
   
-  const addAssignment = (theAssignment: Assignment[]) => { 
+  const addAssignment = (theAssignment: TAssignment[]) => { 
     setAssignment([...assignment, {id: theAssignment.length + 1, name: "", isComplete: false}])
   }
 

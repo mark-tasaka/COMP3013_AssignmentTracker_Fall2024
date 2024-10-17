@@ -1,7 +1,7 @@
 import styles from "./assignment.module.css";
 import { TbTrash } from "react-icons/tb";
-import { useState } from "react";
-import React from "react";
+//import { useState } from "react";
+//import React from "react";
 
 //type Props2 = { name: Assignments.title,  }
 
