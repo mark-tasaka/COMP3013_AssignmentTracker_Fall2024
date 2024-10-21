@@ -2,11 +2,21 @@ import styles from "./header.module.css";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { uppercase } from "../../helpers/stringHelpers";
 import { useState } from "react";
+//import { TAssignment } from "../../type/type";
 
-export function Header(addAssignment: any) {
+/*
+type Props = {
+  addAssignment: React.Dispatch<React.SetStateAction<TAssignment[]>>;
+}*/
+
+export function Header( addAssignment: any) {
   const [content, setContent] = useState("");
   let buttonCondition = (content.length === 0 ? true: false);
-  let cursorCondition = (buttonCondition === true ? "not-allowed": "pointer")
+  let cursorCondition = (buttonCondition === true ? "not-allowed": "pointer");
+  /*
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }*/
   return (
     <header className={styles.header}>
       {/* This is simply to show you how to use helper functions */}
